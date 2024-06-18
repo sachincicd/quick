@@ -1,0 +1,20 @@
+name: ci
+on: push
+
+jobs:
+    unittesting:
+        runs-on: ubuntu-latest
+        env:
+          nodejsver: '18'  
+        steps:
+          - name: checkout the Project 
+            uses: actions/checkout@v4
+          - name: Step up Nodejs 
+            uses: actions/setup-node@v4
+            with:
+                node-version: $nodejsver
+          - name: install Dependencies 
+            run: npm ci
+          - name: Unit Test the project 
+            run: npm test 
+        
