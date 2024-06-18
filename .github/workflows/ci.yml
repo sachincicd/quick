@@ -2,7 +2,7 @@ name: ci
 on: push
 env: 
   test-art-name: testReport
-  test-art-files: reports/awesome-reports/mochawesome.html
+  test-art-files: mochawesome.html
 jobs:
     unittesting:
         runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
           - name: Unit Test the project 
             run: npm test 
           - name: find the files 
-            run: cat reports/awesome-reports/mochawesome.html
+            run: mv reports/awesome-reports/mochawesome.html mochawesome.html
           - name: Upload the Test Report 
             uses: actions/upload-artifact@v4
             with:
