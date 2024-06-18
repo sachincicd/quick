@@ -2,7 +2,7 @@ name: ci
 on: push
 env: 
   test-art-name: testReport
-  test-art-files: mochawesome.html
+  test-art-files: ./reports/*
 jobs:
     unittesting:
         runs-on: ubuntu-latest
