@@ -16,7 +16,7 @@ jobs:
             with:
                 node-version: ${{env.nodejsver}}
           - name: install Dependencies 
-            run: npm install nyc
+            run: npm install 
           - name: Unit Test the project 
             run: npm test 
           - name: find the files 
