@@ -12,7 +12,7 @@ jobs:
           - name: Step up Nodejs 
             uses: actions/setup-node@v4
             with:
-                node-version: $nodejsver
+                node-version: ${{env.nodejsver}}
           - name: install Dependencies 
             run: npm ci
           - name: Unit Test the project 
