@@ -1,6 +1,8 @@
 name: ci
 on: push
-
+env: 
+  test-art-name: testReport
+  test-art-file-name: reports.txt  
 jobs:
     unittesting:
         runs-on: ubuntu-latest
@@ -16,5 +18,10 @@ jobs:
           - name: install Dependencies 
             run: npm install
           - name: Unit Test the project 
-            run: npm test 
+            run: npm test --reporter $test-art-file-name
+          - name: Upload the Test Report 
+            uses: actions/upload-artifact@v4
+            with:
+                name: test-art-name
+                path: $test-art-file-name
         
