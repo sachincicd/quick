@@ -2,7 +2,7 @@ name: ci
 on: push
 env: 
   test-art-name: testReport
-  test-art-file-name: reports.txt  
+  test-art-file-name: ./reports/coverage  
 jobs:
     unittesting:
         runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
           - name: install Dependencies 
             run: npm install -g -g mochawesome-report-generator
           - name: Unit Test the project 
-            run: npm test --reporter $test-art-file-name
+            run: npm test 
           - name: Upload the Test Report 
             uses: actions/upload-artifact@v4
             with:
