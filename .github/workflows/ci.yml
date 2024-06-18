@@ -5,7 +5,7 @@ jobs:
     unittesting:
         runs-on: ubuntu-latest
         env:
-          nodejsver: '18'  
+          nodejsver: '18.0'  
         steps:
           - name: checkout the Project 
             uses: actions/checkout@v4
