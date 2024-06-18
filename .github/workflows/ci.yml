@@ -19,6 +19,8 @@ jobs:
             run: npm install nyc
           - name: Unit Test the project 
             run: npm test 
+          - name: find the files 
+            run: ls -l
           - name: Upload the Test Report 
             uses: actions/upload-artifact@v4
             with:
