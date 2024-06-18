@@ -16,7 +16,7 @@ jobs:
             with:
                 node-version: ${{env.nodejsver}}
           - name: install Dependencies 
-            run: npm install
+            run: npm install -g -g mochawesome-report-generator
           - name: Unit Test the project 
             run: npm test --reporter $test-art-file-name
           - name: Upload the Test Report 
