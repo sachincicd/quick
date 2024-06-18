@@ -4,8 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "mocha",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha --dir ./reports/coverage"
+    "test": "mocha --reporter mochawesome",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha --dir ./reports/coverage "
   },
   "author": "Alicia <alicia@aliciasykes.com> (http://aliciasykes.com)",
   "license": "ISC",
