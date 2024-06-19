@@ -19,6 +19,8 @@ jobs:
             run: npm install 
           - name: Unit Test the project 
             run: npm test 
+          - name: Unit Test the project 
+            run: ls -l
           - name: Test coverage test 
             run: npm run cover
           - name: Upload the Test Report 
