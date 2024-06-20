@@ -21,6 +21,9 @@
   </a>
 </p>
 
+## Workflow Batch
+
+[![ci](https://github.com/sachincicd/quick/actions/workflows/ci.yml/badge.svg)](https://github.com/sachincicd/quick/actions/workflows/ci.yml)
 
 ## Intro
 This is a quick example project to show how a test environment can be setup in Node.js
